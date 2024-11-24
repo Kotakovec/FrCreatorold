@@ -1,283 +1,81 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="FrCreator is a service that offers free subdomains" />
-        <meta name="author" content="Koťák" />
-        <meta name="application-name" content="FrCreator">
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>O nás</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #4CAF50;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>O nás</h1>
+    </header>
 
-        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-        <meta property="og:site_name" content="FrCreator" /> <!-- website name -->
-        <meta property="og:site" content="frdomains.site" /> <!-- website link -->
-        <meta property="og:title" content="FrCreator" /> <!-- title shown in the actual shared post -->
-        <meta property="og:description" content="FrCreator is a service that offers free subdomains &amp; free email addresses" /> <!-- description shown in the actual shared post -->
-        <meta property="og:image" content="frcreator.jpg" /> <!-- image link, make sure it's jpg -->
-        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-        <meta name="twitter:card" content="summary_large_image" /> <!-- to have large image post format in Twitter -->
+    <section>
+        <h2>Naše mise</h2>
+        <p>
+            Jsme tým profesionálů, kteří se zaměřují na poskytování kvalitních služeb v oblasti webového designu, vývoje a online marketingu. Naším cílem je pomáhat našim klientům růst a dosahovat jejich obchodních cílů pomocí inovativních a efektivních řešení.
+        </p>
 
-        <!-- Webpage Title -->
-        <title>FrCreator</title>
+        <h2>Naše historie</h2>
+        <p>
+            Naše firma byla založena v roce 2010 a od té doby jsme se rozrostli na silný tým odborníků, kteří jsou připraveni čelit i těm nejnáročnějším výzvám. S každým projektem se neustále zlepšujeme a hledáme nové cesty, jak poskytovat přidanou hodnotu našim klientům.
+        </p>
 
-        <!-- Styles -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-        <link href="css/fontawesome-all.css" rel="stylesheet" />
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-        <link href="css/swiper.css" rel="stylesheet" />
-        <link href="css/magnific-popup.css" rel="stylesheet" />
-        <link href="css/dark/styles.css" rel="stylesheet" />
+        <h2>Naše hodnoty</h2>
+        <ul>
+            <li>Profesionalita: Dbáme na vysokou kvalitu ve všem, co děláme.</li>
+            <li>Inovace: Neustále hledáme nové způsoby, jak zlepšit naše služby a přinést klientům konkurenční výhodu.</li>
+            <li>Komunikace: Důsledně komunikujeme s našimi klienty, aby výsledek odpovídal jejich očekáváním.</li>
+            <li>Odpovědnost: Vždy stojíme za naší prací a jsme připraveni reagovat na zpětnou vazbu.</li>
+        </ul>
 
-        <!-- Favicon  -->
-        <link rel="icon" href="/frcreator.jpg" />
-    </head>
-    <body data-spy="scroll" data-target=".fixed-top" class="bg-zinc-700">
+        <h2>Kontaktujte nás</h2>
+        <p>
+            Máte-li zájem o naše služby nebo chcete vědět více, neváhejte nás kontaktovat. Rádi se s vámi spojíme a prodiskutujeme možnosti spolupráce.
+        </p>
+        <p>Email: <a href="mailto:info@nasafirma.cz">info@nasafirma.cz</a></p>
+    </section>
 
-        <!-- Dark Mode (does not work thats why its !--'d) -->
-        <!-- meta name="color-scheme" content="light dark" -->
-        
-
-        <!-- Navigation -->
-        <nav class="navbar fixed-top">
-            <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
-                
-                <!-- Text Logo - Use this if you don't have a graphic logo -->
-                <!-- <a class="text-gray-800 font-semibold text-3xl leading-4 no-underline page-scroll" href="index.html">Pavo</a> -->
-
-                <!-- Image Logo -->
-                <a class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline" href="index.html">
-                    <img src="/favicontp.png" alt="alternative" class="h-15" width="64" height="64"/>
-                </a>
-
-                <button class="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400" type="button" data-toggle="offcanvas">
-                    <span class="navbar-toggler-icon inline-block w-8 h-8 align-middle"></span>
-                </button>
-
-                <div class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
-                    <ul class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
-                        <li>
-                            <a class="nav-link page-scroll active" href="#header">Home <span class="sr-only"></span></a>
-                        </li>
-                        <li>
-                            <a class="nav-link page-scroll" href="#pricing">Pricing</a>
-                        </li>
-                        <li>
-                            <a class="nav-link page-scroll" "<a href="https://kotakovec.github.io/FrCreator/about">Team</a>
-                        </li>
-                        <li>
-                            <a class="nav-link page-scroll" "<a href="https://discord.gg/Wbc358Pwvz">Our Discord</a>
-                        </li>
-                        &nbsp;
-                        &nbsp;
-                        <li>
-                            <a class="get-nav-link page-scroll" href="#get">Get</a>
-                        </li>
-                        <!-- btn-solid-reg -->
-
-                    </ul>
-                </div> <!-- end of navbar-collapse -->
-            </div> <!-- end of container -->
-        </nav> <!-- end of navbar -->
-        <!-- end of navigation -->
-
-        <!-- Header -->
-        <header id="header" class="header py-28 text-center md:pt-36 lg:text-left xl:pt-44 xl:pb-32">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
-                <div class="mb-16 lg:mt-32 xl:mt-40 xl:mr-12">
-                    <h1 class="h1-large mb-5">FrCreator</h1>
-                    <p class="p-large mb-8">Get a Premium domains, servers and Discord bots</p>
-                    <a class="btn-solid-lg page-scroll" href="#get">Get</a>
-                    <a class="btn-solid-lg page-scroll" href="#pricing">View Pricing</a>
-                </div>
-                <div class="xl:text-right">
-                    <img class="inline" src="images/a0085308b8f307b6a422a633ea964a26.png" alt="a0085308b8f307b6a422a633ea964a26.png" />
-                </div>
-            </div> <!-- end of container -->
-        </header> <!-- end of header -->
-        <!-- end of header -->
-
-
-        <!-- Introduction -->
-        <div class="gradiented-class-1">
-            <div class="pt-4 pb-14 text-center background-transparent">
-                <div class="container px-4 sm:px-8 xl:px-4">
-                    <p class="arial-font" style="font-size: 25px;">Changelog:</p>
-                    <p>&nbsp;</p>
-                    <p class="arial-font">May 5th 2024: Website created</p>
-                    <p class="arial-font">May 26th 2024 - Website tutorials preparing / main site finished / shop in progress</p>
-                    <p class="arial-font">June 2th 2024 - Tutorials Complete</p>
-                    <p class="arial-font">June 30th 2024 - domain not renewed so the site wasnt working (at that time we were using NoIP)</p>
-                    <p class="arial-font">July 23rd 2024 - Domain is owned by us again</p>
-                    <p class="arial-font">July 27th 2024 - Discord Server created</p>
-                    <p class="arial-font">June 4th 2024 - Discord Server set up</p>
-                    <p class="arial-font">August 15th 2024 - Domain bought (frdomains.site)</p>
-                    <p class="arial-font">August 20th 2024 - Domain set up</p>
-                    <p class="arial-font">September 6th 2024 - Analytics set up</p>
-                    <p class="arial-font">September 17th 2024 - Domain added to Cloudflare</p>
-                    <p class="arial-font">September 17th 2024 - Dark mode added on basic html pages (tutorials, privacy policy)</p>
-                    <p class="arial-font">September 25th 2024 - Dark mode on main page completed by Koťák</p>
-                    <p class="arial-font">September 27th 2024 - Analytics turned off</p>
-                </div> <!-- end of container -->
-            </div>
-        <!-- end of introduction -->
-
-
-
-
- 
-
-        <!-- Statistics -->
-            <div id="stats" class="counter">
-                <div class="container px-4 sm:px-8">
-                    
-                    <!-- Counter -->
-                    <div id="counter" class="bg-blue-950 rounded-lg shadow-2xl">
-                        <br>
-                        <br>
-                        <div class="cell">
-                            <div class="counter-value number-count" data-count="1">1</div>
-                            <p class="counter-info">Users</p>
-                        </div>
-                        <div class="cell">
-                            <div class="counter-value number-count" data-count="1">1</div>
-                            <p class="counter-info">Order</p>
-                        </div>
-                        <p class="arial-font">October 2nd 2024 - Koťák</p>
-                        <br>
-                    </div>
-                    <!-- end of counter -->
-
-                </div> <!-- end of container -->
-            </div> <!-- end of counter -->
-        </div>
-        <!-- end of statistics -->
-
-
-
-
-
-        <!-- Pricing -->
-        <div id="pricing" class="cards-2">
-            <div class="absolute bottom-0 h-40 w-full bg-transparent"></div>
-            <div class="container px-4 pb-px sm:px-8">
-                <h2 class="mb-2.5 text-white lg:max-w-xl lg:mx-auto text-4xl font-bold">Pricing is just zeros</h2>
-                <p class="mb-16 text-white lg:max-w-3xl lg:mx-auto"> We offer Premium domain, servers and Discord bots</p>
-
-                <!-- Card-->
-                <div class="card drop-shadow-2xl">
-                    <div class="card-body bg-blue-950 rounded-md">
-                        <div class="card-title">STANDARD</div>
-                        <div class="price"><span class="currency">CZK</span><span class="value">0</span></div>
-                        <div class="frequency">one time payment</div>
-                        <p>the standard recommendation</p>
-                        <ul class="list mb-7 space-y-2 text-left">
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Servers</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Discord bots</div>
-                            </li>
-                        </ul>
-                        <div class="button-wrapper">
-                            <a class="btn-solid-reg page-scroll" href="#get">Get</a>
-                        </div>
-                    </div>
-                </div> <!-- end of card -->
-                <!-- end of card -->
-
-                <!-- Card-->
-                <div class="card drop-shadow-2xl">
-                    <div class="card-body bg-blue-950 rounded-md">
-                        <div class="card-title">STANDARD</div>
-                        <div class="price"><span class="currency">CZK</span><span class="value">50</span></div>
-                        <div class="frequency">one time payment</div>
-                        <p>the standard recommendation</p>
-                        <ul class="list mb-7 space-y-2 text-left">
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Premium domains</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Servers</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Discord bots</div>
-                            </li>
-                        </ul>
-                        <div class="button-wrapper">
-                            <a class="btn-solid-reg page-scroll" href="#get">Get</a>
-                        </div>
-                    </div>
-                </div> <!-- end of card -->
-                <!-- end of card -->
-
-            </div> <!-- end of container -->
-        </div> <!-- end of cards-2 -->
-        <!-- end of pricing -->
-
-
-        <!-- Conclusion -->
-        <div id="get" class="basic-5">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2">
-                <div class="mb-16 lg:mb-0">
-                    <i class="fa-brands fa-discord text-center flex justify-center" style="color: #9ec2ff;font-size: 23em;"></i>
-                </div>
-                <div class="lg:mt-24 xl:mt-44 xl:ml-12">
-                    <p class="mb-9 text-white-800 text-3xl leading-10"><u><a href="https://discord.gg/Wbc358Pwvz">Create an order on our Discord</a></u></p>
-                    <p class="mb-9 text-white-800 text-3x1 leading-10">or email us at <u><a href="mailto:contact@creator.frdomains.site">contact@creator.frdomains.site</a></u></p>
-                </div>
-            </div> <!-- end of container -->
-        </div> <!-- end of basic-5 -->
-        <!-- end of conclusion -->
-
-
-        <!-- Footer -->
-        <div id="contact" class="footer">
-            <div class="container px-4 sm:px-8">
-                <h4 class="mb-8 lg:max-w-3xl lg:mx-auto text-2xl font-bold">FrCreator is a group of one programmer and one web designer</h4>
-                <div class="social-container">
-                    <span class="fa-stack">
-                        <a href="/discord">
-                            <!-- i class="fas fa-circle fa-stack-2x" --><!-- /i -->
-                            <!-- i class="fab fa-discord fa-stack-1x" --><!-- /i -->
-                        </a>
-                    </span>
-                <center>
-                    <iframe src="https://discord.com/widget?id=1299994622830837851&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                </center>
-                </div> <!-- end of social-container -->
-            </div> <!-- end of container -->
-        </div> <!-- end of footer -->
-        <!-- end of footer -->
-
-
-        <!-- Copyright -->
-        <div class="copyright">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
-                <ul class="mb-4 list-unstyled p-small">
-                    <li class="mb-2"><a href="https://kotakovec.github.io/FrCreator/about">Team</a></li>
-                </ul>
-
-                <p class="pb-2 p-small statement">Made by <a href="https://kotakovec.wz.cz/">Koťák</a></p>
-            </div> 
-
-        <!-- end of container -->
-        </div> <!-- end of copyright -->
-        <!-- end of copyright -->
-
-
-        <!-- Scripts -->
-        <script src="js/jquery.min.js"></script> <!-- jQuery for JavaScript plugins -->
-        <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-        <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-        <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-        <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    </body>
+    <footer>
+        <p>&copy; 2024 Naše firma. Všechna práva vyhrazena.</p>
+    </footer>
+</body>
 </html>
