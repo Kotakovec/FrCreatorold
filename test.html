@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FrCreator is currently undergoing maintenance. We'll be back soon with improvements!">
+    <title>Page under maintenance - FrCreator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,44,106,1) 100%);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 { font-size: clamp(40px, 5vw, 60px); margin-bottom: 10px; }
+        h2 { font-size: clamp(20px, 3vw, 30px); margin-bottom: 30px; }
+        .countdown { margin-top: 30px; font-size: 1.5em; color: #e74c3c; font-weight: bold; }
+        .time-left { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .time-unit { min-width: 80px; }
+        .time-value { font-size: 2.5em; font-weight: bold; line-height: 1; }
+        .time-label { font-size: 0.9em; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
+        .no-js-message { display: none; margin-top: 20px; }
+        .js-disabled .no-js-message { display: block; }
+        .js-disabled .countdown { display: none; }
+        @media (max-width: 480px) {
+            .time-left { gap: 8px; }
+            .time-unit { min-width: 70px; }
+            .time-value { font-size: 2em; }
+        }
+        .video-container { margin-top: 40px; width: 80%; max-width: 600px; }
+        video { width: 100%; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); }
+    </style>
+</head>
+
+<body class="js-disabled">
+    <noscript>
+        <style>.js-disabled { display: flex !important; }</style>
+    </noscript>
+
+    <div class="maintenance-container">
+        <h1>Page under maintenance</h1>
+        <h2>Our team is working on it</h2>
+
+        <div class="no-js-message">
+            JavaScript is required for the countdown timer. We expect to be back by April 30, 2025.
+        </div>
+
+        <div class="countdown">
+            <div class="time-left">
+                <div class="time-unit">
+                    <div class="time-value" id="days">00</div>
+                    <div class="time-label">Days</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-value" id="hours">00</div>
+                    <div class="time-label">Hours</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-value" id="minutes">00</div>
+                    <div class="time-label">Minutes</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-value" id="seconds">00</div>
+                    <div class="time-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="assets/videos/maintenance-animation.mp4" type="video/mp4">
+            <source src="assets/videos/maintenance-animation.webm" type="video/webm">
+            <img src="assets/images/maintenance-placeholder.jpg" alt="Maintenance in progress">
+        </video>
+    </div>
+
+    <script>
+        // Remove no-js class if JavaScript is enabled
+        document.body.classList.remove('js-disabled');
+
+        // Fixed date - April 30, 2025 (month is 0-indexed, so 3 = April)
+        const endDate = new Date(2025, 3, 30, 23, 59, 59);
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeLeft = endDate - now;
+
+            if (timeLeft <= 0) {
+                document.querySelector(".countdown").innerHTML = 
+                    '<div style="font-size: 1.5em;">Maintenance completed! We\'re working on bringing the site back online.</div>';
+                return;
+            }
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days.toString().padStart(2, '0');
+            document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+
+            requestAnimationFrame(updateCountdown);
+        }
+
+        // Start the countdown
+        updateCountdown();
+    </script>
+</body>
+</html>
